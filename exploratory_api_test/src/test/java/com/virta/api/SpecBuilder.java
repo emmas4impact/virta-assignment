@@ -17,7 +17,6 @@ public class SpecBuilder {
 
     public static RequestSpecification getRequestSpec(){
         return  new RequestSpecBuilder()
-//                .setBaseUri(System.getProperty("STATION_BASE_URL"))
                 .setBaseUri("https://api-energy-k8s.test.virtaglobal.com")
                 .setBasePath(BASE_PATH)
                 .setContentType(ContentType.JSON)
