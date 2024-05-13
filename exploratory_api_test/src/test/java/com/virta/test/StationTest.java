@@ -4,15 +4,10 @@ import com.virta.api.applicationApi.StationAPI;
 import com.virta.pojo.StationRequest;
 
 import com.virta.pojo.StationResponse;
-import com.virta.api.SpecBuilder;
+
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-
-import static com.virta.api.SpecBuilder.getRequestSpec;
-import static com.virta.api.SpecBuilder.getResponseSpec;
-import static com.virta.api.applicationApi.StationAPI.*;
-import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 

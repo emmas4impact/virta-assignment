@@ -1,4 +1,5 @@
 package com.virta.stepDefinitions;
+import com.virta.api.applicationApi.StationAPI;
 import io.qameta.allure.Allure;
 import com.virta.pojo.StationRequest;
 import com.virta.pojo.StationResponse;
@@ -30,7 +31,8 @@ public class MyStepdefs {
     public void iPassTheToEndpointAndToPayload(String stationId, String command) {
         StationRequest requestVersion = new StationRequest()
                 .setCommand(command);
-        response = request.body(requestVersion).post(BASE_PATH + TESTS+stationId);
+       response = StationAPI.post( requestVersion,stationId);
+
     }
 
     @Then("I receive response code {int}")
